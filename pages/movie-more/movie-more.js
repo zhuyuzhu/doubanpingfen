@@ -174,7 +174,7 @@ Page({
       title: '提示',
       content: '用户点击购票',
       success:function(res) {
-        console.log(res);
+        
       },
       fail: function(err) {
         console.log(err); 

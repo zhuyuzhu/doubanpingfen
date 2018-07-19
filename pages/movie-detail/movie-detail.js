@@ -13,13 +13,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    console.log(options);
+    //此处的options就是id的值
     var url = app.globalData.doubanBase + app.globalData.subject + options.id;
     wx.request({
       url,
       type: 'GET',
       header: {'content-type' : 'json'},
-      success: res => console.log(res)
+      success: res => {} //此处的res就是data对象
     })
   },
 
