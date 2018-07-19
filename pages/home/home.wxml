@@ -1,0 +1,39 @@
+<!--pages/home/home.wxml-->
+<import src="/pages/movie-grid/movie-grid.wxml"></import>
+<view class='cont'>
+  <view class='search-movie' bindtap='bindToSearch'>
+    <icon type='search' class='search-icon' size='16'></icon>
+    <text class='search-placeholder' >搜索电影</text>
+  </view>
+  <view class='session-page'>
+    <view class='session-header'>
+      <text class='header-title'>电影热映</text>
+      <text class='header-more' bindtap='bindToMore' data-type-id='inThearters'>更多></text>
+    </view>
+    <view class='session-content' >
+      <scroll-view scroll-x="ture" class='movie-scroll'>
+         <block wx:for="{{inThearters}}" wx:key="{{inThearters}}">
+        <template is = "movie-grid" data="{{...item}}"></template>
+        <!-- 此处的item就是指inTheater，因为遍历每一项 -->
+      </block>
+      </scroll-view>
+     
+    </view>
+  </view>
+    <view class='session-page'>
+    <view class='session-header'>
+      <text class='header-title'>即将上映</text>
+
+      <text class='header-more' bindtap='bindToMore' data-type-id='comingSoon'>更多></text>
+    </view>
+    <view class='session-content' >
+      <scroll-view scroll-x="ture" class='movie-scroll'>
+         <block wx:for="{{comingSoon}}" wx:key="{{comingSoon}}">
+        <template is = "movie-grid" data="{{...item}}"></template>
+        <!-- 此处的item就是指inTheater，因为遍历每一项 -->
+      </block>
+      </scroll-view>
+     
+    </view>
+  </view>
+</view>

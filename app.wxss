@@ -1,0 +1,32 @@
+/**app.wxss**/
+
+page {
+  height: 100%;
+  background: #f8f8f8;
+  font-size: 32rpx;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+} 
+/* 因为至少有两个页面用到相同的样式，所以在全局进行配置 */
+.search-movie {
+  display: flex;
+  padding: 20rpx 30rpx;
+  align-items: center;
+  background: #fff;
+  border-width: 2rpx 0rpx;
+  border-style: solid;
+  border-color: #888;
+  margin-bottom: 30rpx;
+}
+.search-icon {
+  margin-right: 30rpx;
+
+}
+.search-placeholder {
+  color:#d8d8d8;
+}

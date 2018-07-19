@@ -1,0 +1,12 @@
+<!--pages/movie-grid/movie-grid.wxml-->
+<import src="/pages/movie-rating/movie-rating.wxml"></import>
+<template name="movie-grid">
+  <view class='movie-wrapper' data-id='{{id}}'bindtap='toDetail' data-id='{{id}}'>
+    <view class='movie-content'>
+      <image class='poster' src='{{images.medium}}'></image>
+      <text class='name'>{{title}}</text>
+      <template is="rating" data="{{rating}}"></template>
+      <text class='wish-count'>{{collect_count}}人想看</text>
+    </view>
+  </view>
+</template>
